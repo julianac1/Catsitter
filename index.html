@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Estilo/style.css">
+    <title>Catsitter</title>
+</head>
+<body>
+
+    <header>
+        <h1>TITULO</h1>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="./index.html">Inicio</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="./secciones/clientes.html">Clientes</a>
+                </li>
+            </ul>
+        
+        </nav>
+        
+    </header>
+
+    <main>
+        <!-- que el catsitter, sobre nosotros, etc -->
+        <div>
+        <h2>Sobre nosotros:</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, fugit. Illo repudiandae numquam nemo consectetur libero perferendis, blanditiis expedita! Expedita eius quae ipsa laborum doloremque explicabo repudiandae modi magni unde!</p>
+        </div>
+
+        <div>
+            <h2>Que es catsitter?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa facere impedit laudantium eaque voluptates vero amet, eos ducimus numquam optio exercitationem neque nemo quisquam ea voluptas nisi. Est, similique incidunt.</p>
+        </div>
+        
+
+        <div class="cotizacion">
+            <h3>Cotización:</h3>
+
+            <form action="" method="get">
+                <label for="noches">
+                    <span>Número de noches</span>
+                    <input type="number" id="noches">
+                </label>
+                <br>
+                <label for="gatos">
+                    <span>Cantidad de gatos</span>
+                    <input type="number" id="gatos">
+                </label>
+                <br>
+                <button onclick="calcular()">Calcular</button>
+                <br>
+                <div id="total"></div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <!-- agregar informacion de contacto (email + IG) y barra de navegación -->
+    </footer>
+
+    
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./JavaScript/script.js"></script>
+</body>
+</html>
