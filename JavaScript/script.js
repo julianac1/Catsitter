@@ -2,7 +2,7 @@
 
 //mensage de bienvenida - pagina inicial
 
-let bienvenida = prompt('Buscas una catsitter para tu michi? Sí o No');
+/*let bienvenida = prompt('Buscas una catsitter para tu michi? Sí o No');
 
 function inicio (respuestaA, respuestaB){
     let entrar = "Sí";
@@ -19,6 +19,7 @@ function inicio (respuestaA, respuestaB){
 };
 
 inicio();
+*/
 
 //mensaje de bienvenida sin function
 /*let bienvenida = prompt('Buscas una catsitter para tu michi? Sí o No');
@@ -33,6 +34,40 @@ if (bienvenida == entrar){
     alert ("ERROR. Debes escribir Sí o No");
     prompt('Buscas una catsitter para tu michi? Sí o No');
 }*/
+
+
+
+//Cotizacion con prompt
+let noches = prompt('1 o 2 noches');
+
+function cotizacion (respuestaA, respuestaB){
+
+    if (noches == 1){
+        alert ('El monto a pagar es U$ 100');
+    } else {
+        alert ("El monto a pagar es U$ 200");
+    };
+    
+};
+cotizacion();
+
+
+//cotizacion conectado con HTML - aún no funciona
+/*let noches = document.getElementById ("noches").value;
+
+function cotizacion () {
+    if (noches == 1){
+        alert ("El monto a pagar es U$ 100");
+    } else {
+        alert ("El monto a pagar es U$ 200");
+    };
+};
+
+cotizacion();
+*/
+
+
+
 
 
 

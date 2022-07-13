@@ -40,25 +40,30 @@
             <h2>Que es catsitter?</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa facere impedit laudantium eaque voluptates vero amet, eos ducimus numquam optio exercitationem neque nemo quisquam ea voluptas nisi. Est, similique incidunt.</p>
         </div>
+
         
 
+
+        <!-- Cotizacion con base en noches + cantidad gatos -->
         <div class="cotizacion">
             <h3>Cotización:</h3>
 
             <form action="" method="get">
                 <label for="noches">
                     <span>Número de noches</span>
-                    <input type="number" id="noches">
+                    <input id="noches">
                 </label>
                 <br>
                 <label for="gatos">
                     <span>Cantidad de gatos</span>
-                    <input type="number" id="gatos">
+                    <input id="gatos">
                 </label>
+                <br>
                 <br>
                 <button onclick="calcular()">Calcular</button>
                 <br>
-                <div id="total"></div>
+                <br>
+                <div id="total">Total:</div>
 
             </form>
 
@@ -66,6 +71,9 @@
 
     </main>
 
+
+
+    
     <footer>
         <!-- agregar informacion de contacto (email + IG) y barra de navegación -->
     </footer>
