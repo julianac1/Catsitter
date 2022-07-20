@@ -94,8 +94,6 @@ function sumanoches () {
             alert ('Número de noches (máximo 7 noches):');
             break;
     }
-
-    return numeronoches;
     
 }
 sumanoches();
@@ -127,12 +125,12 @@ function sumagatos () {
             break;
     }
 
-    return numerogatos;
 }
 sumagatos();
 
 
 //Mostrar suma: noches + gatos
+
 
 
 
