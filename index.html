@@ -49,34 +49,37 @@
             <h3>Cotización:</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-            <form action="" method="get">
+            <form id="formulario" action="" method="get">
                 <label for="nombre">
                     <span>Nombre Completo: </span>
-                    <input id="noches">
-                </label>
-                <label for="noches">
-                    <span>Número de noches (máximo 7 noches): </span>
-                    <input id="noches">
-                </label>
-                <br>
-                <label for="gatos">
-                    <span>Cantidad de gatos (máximo 4 gatos): </span>
-                    <input id="gatos">
+                    <input type="text" name="nombre" id="nombre">
                 </label>
                 <br>
                 <label for="email">
                     <span>Correo electronico: </span>
-                    <input id="email">
+                    <input type="email" name="email" id="email">
                 </label>
                 <br>
-                <button onclick="calcular()">Calcular</button>
+                <label for="noches">
+                    <span>Número de noches (máximo 7 noches): </span>
+                    <input type="number" name="noches" id="noches">
+                </label>
                 <br>
+                <label for="gatos">
+                    <span>Cantidad de gatos (máximo 4 gatos): </span>
+                    <input type="number" name="gatos" id="gatos">
+                </label>
                 <br>
-                <div id="total">Total:</div>
+                <button type="submit">Calcular</button>
                 <br>
-                
+                <!-- mensaje: Le enviaremos la cotización dentro de 24hrs - en JS -->
+                <div id="hola"></div>
+                <br>
+                <div id="totalNoches"></div>
+                <br>
+                <div id="totalGatos"></div>
             </form>
-            <h4>Enviaremos la cotización a su correo electronico dentro de 48hrs.</h4> 
+            <!-- <h4>Enviaremos la cotización a su correo electronico dentro de 48hrs.</h4>  -->
         </div>
 
     </main>

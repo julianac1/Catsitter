@@ -1,8 +1,132 @@
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('El docuento se ha cargado');
+});
+
+
+//nombre usuario + email = innerHTML 
+const formulario = document.querySelector('#formulario');
+
+const enviarFormulario = (event) =>{
+    event.preventDefault();
+    console.log(event.target.nombre.value,
+    event.target.email.value
+    );
+    hola.innerHTML = `
+    <div>
+        <h4> Enviaremos la cotización a ${event.target.nombre.value} - ${event.target.email.value} - dentro de 24hrs</h4>
+    </div>`
+};
+
+formulario.addEventListener('submit',enviarFormulario);
+
+
+//Precio noches = innerHTML
+
+const numeroNoches = (event) => {
+    event.preventDefault();
+    console.log(event.target.noches.value);
+    sumanoches();
+    totalNoches.innerHTML = `
+    <div>
+        <h4> El total por la noches es:  </h4>
+    </div>`
+};
+
+const noches = [1,2,3,4,5,6,7];
+
+function sumanoches () {
+
+    switch (event.target.noches.value) {
+        case '1':
+            console.log('Total U$10');
+            break;
+
+            case '2':
+            console.log('Total U$20');
+            break;
+
+            case '3':
+            console.log('Total U$30');
+            break;
+
+            case '4':
+            console.log('Total U$40');
+            break;
+
+            case '5':
+            console.log('Total U$50');
+            break;
+
+            case '6':
+            console.log('Total U$60');
+            break;
+
+            case '7':
+            console.log('Total U$70');
+            break;
+    
+        default:
+            alert ('Número de noches (máximo 7 noches):');
+            break;
+    }
+    
+};
+
+formulario.addEventListener('submit', numeroNoches);
+
+//Precio gatos = innerHTML
+
+const numeroGatos = (event) => {
+    event.preventDefault();
+    console.log(event.target.gatos.value);
+    sumagatos ();
+    totalGatos.innerHTML = `
+    <div>
+        <h4> El total por la cantidad de gatos es:  </h4>
+    </div>`
+};
+
+const gatos = [1,2,3,4];
+
+function sumagatos () {
+
+    switch (event.target.gatos.value) {
+        case '1':
+            console.log('Total U$10');
+            break;
+
+            case '2':
+            console.log('Total U$20');
+            break;
+
+            case '3':
+            console.log('Total U$30');
+            break;
+
+            case '4':
+            console.log('Total U$40');
+            break;
+
+            
+        default:
+            alert('Cantidad de gatos (máximo 4 gatos):')
+            break;
+    }
+
+};
+
+formulario.addEventListener('submit', numeroGatos);
+
+
+
+
+
+
 
 
 //mensage de bienvenida - pagina inicial
 
-let bienvenida = prompt('Buscas una catsitter para tu michi? Sí o No');
+/*let bienvenida = prompt('Buscas una catsitter para tu michi? Sí o No');
 
 function inicio (respuestaA, respuestaB){
     let entrar = "Sí";
@@ -18,7 +142,7 @@ function inicio (respuestaA, respuestaB){
     
 };
 
-inicio();
+inicio(); */
 
 
 //mensaje de bienvenida sin function
@@ -37,6 +161,10 @@ if (bienvenida == entrar){
 
 
 
+
+
+
+
 //Cotizacion con prompt
 /*let noches = prompt('1 o 2 noches');
 
@@ -52,9 +180,10 @@ function cotizacion (respuestaA, respuestaB){
 cotizacion();
 */
 
+
 //Cotización version 2
 // Cada noche U$ 10 + cada gato U$10
-const noches = [1,2,3,4,5,6,7];
+/*const noches = [1,2,3,4,5,6,7];
 const gatos = [1,2,3,4];
 
 let numeronoches = prompt('Número de noches (máximo 7 noches):');
@@ -126,7 +255,7 @@ function sumagatos () {
     }
 
 }
-sumagatos();
+sumagatos(); */
 
 
 //Mostrar suma: noches + gatos
@@ -139,9 +268,9 @@ sumagatos();
 
 
 
-//objeto math con metodo random para sortear un descuento de 25% sobre el valor total
+//objeto math con metodo random para sortear un descuento de 20% sobre el valor total
 
-alert('Hoy estamos sorteando un 20% de descuento sobre el valor total de tu cotización! Si sale el número 5 ganas el descuento!');
+/*alert('Hoy estamos sorteando un 20% de descuento sobre el valor total de tu cotización! Si sale el número 5 ganas el descuento!');
 
 function sorteo () {
     let sorteo1a10 = Math.ceil(Math.random () * 10);
@@ -155,7 +284,7 @@ function sorteo () {
     };
 }
 
-sorteo();
+sorteo(); */
 
 
 
@@ -163,20 +292,6 @@ sorteo();
 
 
 
-
-//cotizacion conectado con HTML - aún no funciona
-/*let noches = document.getElementById ("noches").value;
-
-function cotizacion () {
-    if (noches == 1){
-        alert ("El monto a pagar es U$ 100");
-    } else {
-        alert ("El monto a pagar es U$ 200");
-    };
-};
-
-cotizacion();
-*/
 
 
 
