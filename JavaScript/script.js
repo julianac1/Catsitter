@@ -25,49 +25,49 @@ formulario.addEventListener('submit',enviarFormulario);
 const numeroNoches = (event) => {
     event.preventDefault();
     console.log(event.target.noches.value);
-    sumanoches();
+    let total = sumanoches(event.target.noches.value);
     totalNoches.innerHTML = `
     <div>
-        <h4> El total por la noches es:  </h4>
+        <h4> El total por las noches es: ${total}  </h4>
     </div>`
 };
 
 const noches = [1,2,3,4,5,6,7];
 
-function sumanoches () {
+function sumanoches (noches) {
 
-    switch (event.target.noches.value) {
+    switch (noches) {
         case '1':
             console.log('Total U$10');
-            break;
+            return 'Total U$10';
 
             case '2':
             console.log('Total U$20');
-            break;
+            return 'Total U$20';
 
             case '3':
             console.log('Total U$30');
-            break;
+            return 'Total U$30';
 
             case '4':
             console.log('Total U$40');
-            break;
+            return 'Total U$40';
 
             case '5':
             console.log('Total U$50');
-            break;
+            return 'Total U$50';
 
             case '6':
             console.log('Total U$60');
-            break;
+            return 'Total U$60';
 
             case '7':
             console.log('Total U$70');
-            break;
+            return 'Total U$70';
     
         default:
             alert ('Número de noches (máximo 7 noches):');
-            break;
+            return 'El máximo son 7 noches';
     }
     
 };
@@ -79,46 +79,43 @@ formulario.addEventListener('submit', numeroNoches);
 const numeroGatos = (event) => {
     event.preventDefault();
     console.log(event.target.gatos.value);
-    sumagatos ();
+    let totalgatos = sumagatos (event.target.gatos.value);
     totalGatos.innerHTML = `
     <div>
-        <h4> El total por la cantidad de gatos es:  </h4>
+        <h4> El total por la cantidad de gatos es: ${totalgatos} </h4>
     </div>`
 };
 
 const gatos = [1,2,3,4];
 
-function sumagatos () {
+function sumagatos (gatos) {
 
-    switch (event.target.gatos.value) {
+    switch (gatos) {
         case '1':
             console.log('Total U$10');
-            break;
+            return 'Total U$10';
 
             case '2':
             console.log('Total U$20');
-            break;
+            return 'Total U$20';
 
             case '3':
             console.log('Total U$30');
-            break;
+            return 'Total U$30';
 
             case '4':
             console.log('Total U$40');
-            break;
+            return 'Total U$40';
 
             
         default:
             alert('Cantidad de gatos (máximo 4 gatos):')
-            break;
+            return 'Cantidad de gatos (máximo 4 gatos)';
     }
 
 };
 
 formulario.addEventListener('submit', numeroGatos);
-
-
-
 
 
 
