@@ -74,6 +74,8 @@ function sumanoches (noches) {
 
 formulario.addEventListener('submit', numeroNoches);
 
+
+
 //Precio gatos = innerHTML
 
 const numeroGatos = (event) => {
@@ -118,6 +120,27 @@ function sumagatos (gatos) {
 formulario.addEventListener('submit', numeroGatos);
 
 
+//Armazenar el nombre y email del usuario
+
+
+function guardarDatos (nombre, email) {
+
+    let nombreUsuario = document.getElementById ('nombre').value;
+    let emailUsuario = document.getElementById ('email').value;
+
+ //función para guardar nombre y email al apretar botón calcular
+
+    localStorage.setItem('user', nombreUsuario);
+    localStorage.setItem('email', emailUsuario);
+
+}
+
+formulario.addEventListener('submit', guardarDatos);
+
+
+
+
+
 
 
 
@@ -142,7 +165,10 @@ function inicio (respuestaA, respuestaB){
 inicio(); */
 
 
+
+
 //mensaje de bienvenida sin function
+
 /*let bienvenida = prompt('Buscas una catsitter para tu michi? Sí o No');
 let entrar = "Sí";
 let salir = "No";
@@ -178,7 +204,10 @@ cotizacion();
 */
 
 
+
+
 //Cotización version 2
+
 // Cada noche U$ 10 + cada gato U$10
 /*const noches = [1,2,3,4,5,6,7];
 const gatos = [1,2,3,4];
@@ -255,7 +284,6 @@ function sumagatos () {
 sumagatos(); */
 
 
-//Mostrar suma: noches + gatos
 
 
 

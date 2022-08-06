@@ -10,10 +10,10 @@
 </head>
 <body>
 
-    <header>
-        <h1>TITULO</h1>
+    <header class="encabezado">
+        <h1 class="titulo">CAT SITTER - Cuidadoras de michis</h1>
 
-        <nav>
+        <nav class="navegador">
             <ul>
                 <li>
                     <a href="./index.html">Inicio</a>
@@ -33,12 +33,17 @@
         <!-- que el catsitter, sobre nosotros, etc -->
         <div>
         <h2>Sobre nosotros:</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, fugit. Illo repudiandae numquam nemo consectetur libero perferendis, blanditiis expedita! Expedita eius quae ipsa laborum doloremque explicabo repudiandae modi magni unde!</p>
+        <p>
+            Somos una equipe formada por tres amigas - Fatima, Juliana y Paula - enamoradas por los gatos!
+            El proyecto nazce cuando Paula necesita viajar por un largo período de tiempo, y al no poder llevar su gato en la viaje, pide a ayuda a Juliana y Fatima quienes se organizaron para cuidar del michi. Durante este período ellas se dan cuenta que existe una demanda en el mercado de cuidadoras de gatos indoors y deciden criar esta pyme.
+        </p>
         </div>
 
         <div>
             <h2>Que es catsitter?</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa facere impedit laudantium eaque voluptates vero amet, eos ducimus numquam optio exercitationem neque nemo quisquam ea voluptas nisi. Est, similique incidunt.</p>
+            <p>
+                Cat Sitter es un servicio de niñera de gatos, para personas que por diferentes motivos tienen que ausentarse y no tienen quién cuide a su gato.
+            </p>
         </div>
 
         
@@ -47,7 +52,7 @@
         <!-- Cotizacion con base en noches + cantidad gatos -->
         <div class="cotizacion">
             <h3>Cotización:</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Completa el formulario abajo con la cantidad de noches que necesitas que cuidemos a tu michi y la cantidad de gatos, y nosotros te enviaremos por email la cotización. De estar de acuerdo, agendamos una visita para conocer el espacio y el gatito.</p>
 
             <form id="formulario" action="" method="get">
                 <label for="nombre">
@@ -75,8 +80,10 @@
                 <!-- mensaje: Le enviaremos la cotización dentro de 24hrs - en JS -->
                 <div id="hola"></div>
                 <br>
+                <!-- mensaje: El total por la noche es: - en JS -->
                 <div id="totalNoches"></div>
                 <br>
+                <!-- mensaje: El total por la cantidad de gatos es: - en JS -->
                 <div id="totalGatos"></div>
                 
             </form>
