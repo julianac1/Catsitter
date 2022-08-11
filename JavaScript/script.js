@@ -293,7 +293,30 @@ sumagatos(); */
 
 
 
-//objeto math con metodo random para sortear un descuento de 20% sobre el valor total
+//SweetAlert: metodo random para sortear un descuento de 20% sobre el valor total
+
+window.onload = ()=>{ 
+
+Swal.fire({
+    icon: 'warning',
+    title: 'Sorteo!',
+    text: 'Hoy estamos sorteando un 20% de descuento sobre el valor total de tu cotización! Si sale el número 5 ganas el descuento! Quieres intentar la suerte?',
+    showConfirmButton: true,
+    confirmButtonText: 'Sí, quiero',
+    showCancelButton: true,
+    cancelButtonText: 'No, no quiero',
+    
+}).then((result)=>{
+    if (result.isConfirmed) {
+        let sorteo1a10 = Math.ceil(Math.random () * 10);
+        if (sorteo1a10 == 5) {
+            Swal.fire('Hoy es tu dia de suerte! Usa el codigo OFF5');
+        }else{
+            Swal.fire('Quizá en la proxima oportunidad');
+        }
+    }
+})
+}
 
 /*alert('Hoy estamos sorteando un 20% de descuento sobre el valor total de tu cotización! Si sale el número 5 ganas el descuento!');
 

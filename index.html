@@ -34,8 +34,7 @@
         <div>
         <h2>Sobre nosotros:</h2>
         <p>
-            Somos una equipe formada por tres amigas - Fatima, Juliana y Paula - enamoradas por los gatos!
-            El proyecto nazce cuando Paula necesita viajar por un largo período de tiempo, y al no poder llevar su gato en la viaje, pide a ayuda a Juliana y Fatima quienes se organizaron para cuidar del michi. Durante este período ellas se dan cuenta que existe una demanda en el mercado de cuidadoras de gatos indoors y deciden criar esta pyme.
+            Somos una equipo formado por tres amigas - Fatima, Juliana y Paula - ¡enamoradas de los gatos! El proyecto nace cuando Paula necesita viajar por un largo periodo de tiempo. Al no poder llevar a su gato, le pide a ayuda a Juliana y Fatima, quienes se organizaron para cuidar del michi. Durante este periodo, ellas se dan cuenta que existe una gran demanda en el mercado de cuidadoras de gatos indoors y deciden crear este pyme.
         </p>
         </div>
 
@@ -52,7 +51,9 @@
         <!-- Cotizacion con base en noches + cantidad gatos -->
         <div class="cotizacion">
             <h3>Cotización:</h3>
-            <p>Completa el formulario abajo con la cantidad de noches que necesitas que cuidemos a tu michi y la cantidad de gatos, y nosotros te enviaremos por email la cotización. De estar de acuerdo, agendamos una visita para conocer el espacio y el gatito.</p>
+            <p>
+                Completa el formulario de abajo con la cantidad de noches que necesitas que cuidemos a tu michi y la cantidad de gatos.  Nosotros te enviaremos por email la cotización y, si estás de acuerdo, agendaremos una visita para conocer el espacio y el gatito.
+            </p>
 
             <form id="formulario" action="" method="get">
                 <label for="nombre">
@@ -67,12 +68,17 @@
                 <br>
                 <label for="noches">
                     <span>Número de noches (máximo 7 noches): </span>
-                    <input type="number" name="noches" id="noches">
+                    <input type="number" name="noches" id="noches" min="1" max="7">
                 </label>
                 <br>
                 <label for="gatos">
                     <span>Cantidad de gatos (máximo 4 gatos): </span>
-                    <input type="number" name="gatos" id="gatos">
+                    <input type="number" name="gatos" id="gatos" min="1" max="4">
+                </label>
+                <br>
+                <label for="descuento">
+                    <span>Codigo descuento: </span>
+                    <input type="text" name="descuento" id="descuento">
                 </label>
                 <br>
                 <button type="submit">Calcular</button>
@@ -103,8 +109,8 @@
     
 
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.26/dist/sweetalert2.all.min.js"></script>
     <script src="./JavaScript/script.js"></script>
 </body>
 </html>
