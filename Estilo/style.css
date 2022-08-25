@@ -4,36 +4,48 @@
 }
 
 
-
+/* header */
 .encabezado{
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "titulo titulo titulo titulo"
+    "navegador navegador navegador navegador";
     background-color: #6EC1E4;
     color: white;
     
 }
 
 .titulo{
-    font-style:italic;
+    grid-area: "titulo titulo tituloo titulo";
+    font-style: italic;
     font-family: 'Courier New', Courier, monospace;
     font-size: 2rem;
+    justify-content: center;
+    align-content: center;
     
 }
 
 .navegador{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    grid-area: "navegador navegador navegador navegador";
     font-family: 'Courier New', Courier, monospace;
+    justify-content: center;
 
 }
 
 li{
     list-style-type: none;
     text-decoration: none;
-    justify-content: center;
     font-family: 'Courier New', Courier, monospace;
 }
 
+li a{
+    grid-area: "navegador navegador navegador navegador";
+    justify-content: center;
+}
+
+
+/* body */
 main{
     background-color: rgb(182,227,212);
 }
