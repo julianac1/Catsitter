@@ -6,47 +6,123 @@
 
 /* header */
 .encabezado{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto;
-    grid-template-areas: "titulo titulo titulo titulo"
-    "navegador navegador navegador navegador";
     background-color: #6EC1E4;
     color: white;
     
 }
 
 .titulo{
-    grid-area: "titulo titulo tituloo titulo";
+    grid-area: titulo;
     font-style: italic;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 2rem;
-    justify-content: center;
-    align-content: center;
+    font-size: 2,5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 1rem 1rem 1rem;
+
     
 }
 
 .navegador{
-    grid-area: "navegador navegador navegador navegador";
+    display: flex;
     font-family: 'Courier New', Courier, monospace;
     justify-content: center;
 
+
 }
 
-li{
+.navegador li{
     list-style-type: none;
     text-decoration: none;
-    font-family: 'Courier New', Courier, monospace;
 }
+/* FIM header */
 
-li a{
-    grid-area: "navegador navegador navegador navegador";
-    justify-content: center;
-}
 
 
 /* body */
 main{
     background-color: rgb(182,227,212);
+    padding: 1rem 1rem 1rem 1rem;
 }
+
+
+/* Imagens Index*/
+
+.img1{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 1rem 1rem 1rem;
+    
+}
+
+.img2{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.img1-1:hover {
+    transform: scale(1.1);
+}
+
+.img1-1 {
+    transition: all 2s;
+}
+
+.img2_2:hover{
+    transform: scale(1.1);
+}
+
+.img2_2 {
+    transition: all 2s;
+}
+
+
+
+
+
+
+
+
+
+
+/* footer */
+
+footer{
+    background-color: #6EC1E4;
+}
+
+footer .h3{
+    justify-content: center;
+}
+
+.rrss{
+    text-align: center;
+}
+
+footer .botones-redessociales {
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 1rem 1rem 1rem;
+
+}
+
+footer .whatsapp {
+    padding: 10px;
+}
+
+footer .tiktok {
+    padding: 10px;
+}
+
+footer .instagram {
+    padding: 10px;
+}
+
+/* FIM footer */
+
+
+
 

@@ -21,6 +21,11 @@
             </ul>
             <ul>
                 <li>
+                    <a href="./secciones/cotizacion.html">Cotización</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
                     <a href="./secciones/clientes.html">Clientes</a>
                 </li>
             </ul>
@@ -29,8 +34,9 @@
         
     </header>
 
-    <main>
+    <main class="main">
         <!-- que el catsitter, sobre nosotros, etc -->
+        
         <div>
         <h2>Sobre nosotros:</h2>
         <p>
@@ -38,63 +44,29 @@
         </p>
         </div>
 
+        <section class="img1">
+            <figure class="img1-1">
+                <img src="./imagens/amigas_con_gatos.jpg" alt="amigas con gatos" height="auto" width="auto">
+            </figure>
+        </section>
+
+        
+
+
         <div>
             <h2>Que es catsitter?</h2>
             <p>
                 Cat Sitter es un servicio de niñera de gatos, para personas que por diferentes motivos tienen que ausentarse y no tienen quién cuide a su gato.
             </p>
+
+            <section class="img2">
+                <figure class="img2_2">
+                    <img src="./imagens/catsitter.png" alt="imagen catsitter" height="auto" width="auto">
+                </figure>
+            </section>
+
         </div>
 
-        
-
-
-        <!-- Cotizacion con base en noches + cantidad gatos -->
-        <div class="cotizacion">
-            <h3>Cotización:</h3>
-            <p>
-                Completa el formulario de abajo con la cantidad de noches que necesitas que cuidemos a tu michi y la cantidad de gatos.  Nosotros te enviaremos por email la cotización y, si estás de acuerdo, agendaremos una visita para conocer el espacio y el gatito.
-            </p>
-
-            <form id="formulario" action="" method="get">
-                <label for="nombre">
-                    <span>Nombre Completo: </span>
-                    <input type="text" name="nombre" id="nombre">
-                </label>
-                <br>
-                <label for="email">
-                    <span>Correo electronico: </span>
-                    <input type="email" name="email" id="email">
-                </label>
-                <br>
-                <label for="noches">
-                    <span>Número de noches (máximo 7 noches): </span>
-                    <input type="number" name="noches" id="noches" min="1" max="7">
-                </label>
-                <br>
-                <label for="gatos">
-                    <span>Cantidad de gatos (máximo 4 gatos): </span>
-                    <input type="number" name="gatos" id="gatos" min="1" max="4">
-                </label>
-                <br>
-                <label for="descuento">
-                    <span>Codigo descuento: </span>
-                    <input type="text" name="descuento" id="descuento">
-                </label>
-                <br>
-                <button type="submit">Calcular</button>
-                <br>
-                <!-- mensaje: Le enviaremos la cotización dentro de 24hrs - en JS -->
-                <div id="hola"></div>
-                <br>
-                <!-- mensaje: El total por la noche es: - en JS -->
-                <div id="totalNoches"></div>
-                <br>
-                <!-- mensaje: El total por la cantidad de gatos es: - en JS -->
-                <div id="totalGatos"></div>
-                
-            </form>
-            <!-- <h4>Enviaremos la cotización a su correo electronico dentro de 48hrs.</h4>  -->
-        </div>
 
     </main>
 
@@ -103,6 +75,55 @@
     
     <footer>
         <!-- agregar informacion de contacto (email + IG) y barra de navegación -->
+
+        <section class="rrss">
+
+            <h3>
+                Nuestras redes sociales:
+            </h3>
+
+        <nav>
+        <ul class="botones-redessociales">
+            
+            <li class="whatsapp">
+                <a href="https://web.whatsapp.com/"><img src="./imagens/whatsappv2.png" height="45" width="45" alt="Whatsapp"></a>
+            </li>
+
+            <li class="tiktok">
+                <a href="https://www.tiktok.com"><img src="./imagens/Tiktokv2.png" width="45" height="45" alt="tiktok"></a>
+            </li>
+
+            <li class="instagram">
+                <a href="https://www.instagram.com/"><img src="./imagens/Instagramv2.png" width="45" height="45" alt="Instagram"></a>
+            </li>
+        </ul>
+        </nav>
+        </section>
+
+
+        <nav class="navegador">
+            <ul>
+                <li>
+                    <a href="./index.html">Inicio</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="./secciones/cotizacion.html">Cotización</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="./secciones/clientes.html">Clientes</a>
+                </li>
+            </ul>
+        
+        </nav>
+
+
+
+
+
     </footer>
 
     
