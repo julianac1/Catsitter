@@ -40,9 +40,69 @@
         <div class="cotizacion">
             <h3>Cotización:</h3>
             <p>
-                Completa el formulario de abajo con la cantidad de noches que necesitas que cuidemos a tu michi y la cantidad de gatos.  Nosotros te enviaremos por email la cotización y, si estás de acuerdo, agendaremos una visita para conocer el espacio y el gatito.
+                Completa el formulario de abajo con la cantidad de noches que necesitas que cuidemos a tu michi y la cantidad de gatos. Nosotros te enviaremos por email la cotización y, si estás de acuerdo, agendaremos una visita para conocer el espacio y el gatito.
             </p>
 
+            <!-- Formulario de cotizacion -->
+
+            <form id="formulario" action="" method="get">
+                <div class="row mb-3">
+                  <label for="inputNombre3" class="col-sm-2 col-form-label">Nombre Completo:</label>
+                  <div class="col-sm-10">
+                    <input type="nombre" class="form-control" id="inputNombre3">
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <label for="inputEmail3" class="col-sm-2 col-form-label">Correo electronico:</label>
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3">
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputNoches3" class="col-sm-2 col-form-label">Número de noches:</label>
+                    <div class="col-sm-10">
+                      <input type="number" class="form-control" id="inputNoches3" min="1" max="7">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputGatos3" class="col-sm-2 col-form-label">Cantidad de gatos:</label>
+                    <div class="col-sm-10">
+                      <input type="number" class="form-control" id="inputGatos3" min="1" max="4">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputDescuento3" class="col-sm-2 col-form-label">Codigo de descuento:</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputDescuento3">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Cotizar</button>
+            </form>
+
+            <!-- mensaje con valor total de la cotizacion en JS-->
+
+            <div id="mensajeCotizacion" ></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- cotizacion version 1
             <form id="formulario" action="" method="get">
                 <label for="nombre">
                     <span>Nombre Completo: </span>
@@ -71,16 +131,26 @@
                 <br>
                 <button type="submit">Calcular</button>
                 <br>
+                -->
                 <!-- mensaje: Le enviaremos la cotización dentro de 24hrs - en JS -->
+                <!--
                 <div id="hola"></div>
                 <br>
+                -->
                 <!-- mensaje: El total por la noche es: - en JS -->
+                <!--
                 <div id="totalNoches"></div>
                 <br>
+                -->
                 <!-- mensaje: El total por la cantidad de gatos es: - en JS -->
+                <!--
                 <div id="totalGatos"></div>
                 
             </form>
+            -->
+        
+
+            
             <!-- <h4>Enviaremos la cotización a su correo electronico dentro de 48hrs.</h4>  -->
         </div>
 
