@@ -8,31 +8,30 @@ const formulario = document.querySelector('#formulario');
 
 const enviarFormulario = (event) =>{
     event.preventDefault();
-    console.log(event.target.nombre.value,
-    event.target.email.value
+    console.log(event.target.inputNombre3.value,
+    event.target.inputEmail3.value
     );
-    hola.innerHTML = `
+    mensajeCotizacion.innerHTML = `
     <div>
-        <h4> Enviaremos la cotización a ${event.target.nombre.value} - ${event.target.email.value} - dentro de 24hrs</h4>
+        <h4> Enviaremos la cotización a ${event.target.inputNombre3.value} al correo electronico: ${event.target.inputEmail3.value} dentro de 24hrs</h4>
     </div>`
 };
 
 formulario.addEventListener('submit',enviarFormulario);
 
 
+
 //Precio noches = innerHTML
 
 const numeroNoches = (event) => {
     event.preventDefault();
-    console.log(event.target.noches.value);
-    let total = sumanoches(event.target.noches.value);
+    console.log(event.target.inputNoches3.value);
+    let total = sumanoches(event.target.inputNoches3.value);
     totalNoches.innerHTML = `
     <div>
         <h4> El total por las noches es: ${total}  </h4>
     </div>`
 };
-
-const noches = [1,2,3,4,5,6,7];
 
 function sumanoches (noches) {
 
@@ -80,15 +79,14 @@ formulario.addEventListener('submit', numeroNoches);
 
 const numeroGatos = (event) => {
     event.preventDefault();
-    console.log(event.target.gatos.value);
-    let totalgatos = sumagatos (event.target.gatos.value);
+    console.log(event.target.inputGatos3.value);
+    let totalgatos = sumagatos (event.target.inputGatos3.value);
     totalGatos.innerHTML = `
     <div>
         <h4> El total por la cantidad de gatos es: ${totalgatos} </h4>
     </div>`
 };
 
-const gatos = [1,2,3,4];
 
 function sumagatos (gatos) {
 
@@ -120,6 +118,33 @@ function sumagatos (gatos) {
 formulario.addEventListener('submit', numeroGatos);
 
 
+
+
+
+//Precio total a pagar = innerHTML
+
+function sumatotal (valor1, valor2) {
+    let suma = parseInt(total) + parseInt(totalgatos);
+    return suma;
+};
+
+const valorFinal = (event) => {
+    event.preventDefault();
+    let totalFinal = sumatotal();
+    valorFinal.innerHTML = `
+    <div>
+        <h4> El total es: ${totalFinal} </h4>
+    </div>`
+};
+
+formulario.addEventListener('submit', valorFinal);
+
+
+
+
+
+
+
 //Armazenar el nombre y email del usuario
 
 
@@ -144,144 +169,6 @@ formulario.addEventListener('submit', guardarDatos);
 
 
 
-//mensage de bienvenida - pagina inicial
-
-/*let bienvenida = prompt('Buscas una catsitter para tu michi? Sí o No');
-
-function inicio (respuestaA, respuestaB){
-    let entrar = "Sí";
-    let salir = "No";
-    if (bienvenida == entrar){
-        alert ('Bienvenida(o), cuidaremos muy bien de tu michi!');
-    } else if (bienvenida == salir){
-        alert ("Acá amamos a los michis. Si no te gusta los gatos, te invitamos a visitar otras páginas");
-    } else {
-        alert ("ERROR. Debes escribir Sí o No");
-        prompt('Buscas una catsitter para tu michi? Sí o No');
-    }
-    
-};
-
-inicio(); */
-
-
-
-
-//mensaje de bienvenida sin function
-
-/*let bienvenida = prompt('Buscas una catsitter para tu michi? Sí o No');
-let entrar = "Sí";
-let salir = "No";
-
-if (bienvenida == entrar){
-    alert ('Bienvenida(o), cuidaremos muy bien de tu michi!');
-} else if (bienvenida == salir){
-    alert ("Acá amamos a los michis. Si no te gusta los gatos, te invitamos a visitar otras páginas");
-} else {
-    alert ("ERROR. Debes escribir Sí o No");
-    prompt('Buscas una catsitter para tu michi? Sí o No');
-}*/
-
-
-
-
-
-
-
-//Cotizacion con prompt
-/*let noches = prompt('1 o 2 noches');
-
-function cotizacion (respuestaA, respuestaB){
-
-    if (noches == 1){
-        alert ('El monto a pagar es U$ 100');
-    } else {
-        alert ("El monto a pagar es U$ 200");
-    };
-    
-};
-cotizacion();
-*/
-
-
-
-
-//Cotización version 2
-
-// Cada noche U$ 10 + cada gato U$10
-/*const noches = [1,2,3,4,5,6,7];
-const gatos = [1,2,3,4];
-
-let numeronoches = prompt('Número de noches (máximo 7 noches):');
-
-function sumanoches () {
-
-    switch (numeronoches) {
-        case '1':
-            console.log('Total U$10');
-            break;
-
-            case '2':
-            console.log('Total U$20');
-            break;
-
-            case '3':
-            console.log('Total U$30');
-            break;
-
-            case '4':
-            console.log('Total U$40');
-            break;
-
-            case '5':
-            console.log('Total U$50');
-            break;
-
-            case '6':
-            console.log('Total U$60');
-            break;
-
-            case '7':
-            console.log('Total U$70');
-            break;
-    
-        default:
-            alert ('Número de noches (máximo 7 noches):');
-            break;
-    }
-    
-}
-sumanoches();
-
-let numerogatos = prompt('Cantidad de gatos (máximo 4 gatos):');
-
-function sumagatos () {
-
-    switch (numerogatos) {
-        case '1':
-            console.log('Total U$10');
-            break;
-
-            case '2':
-            console.log('Total U$20');
-            break;
-
-            case '3':
-            console.log('Total U$30');
-            break;
-
-            case '4':
-            console.log('Total U$40');
-            break;
-
-            
-        default:
-            alert('Cantidad de gatos (máximo 4 gatos):')
-            break;
-    }
-
-}
-sumagatos(); */
 
 
 
@@ -310,7 +197,7 @@ Swal.fire({
     if (result.isConfirmed) {
         let sorteo1a10 = Math.ceil(Math.random () * 10);
         if (sorteo1a10 == 5) {
-            Swal.fire('Hoy es tu dia de suerte! Usa el codigo OFF5');
+            Swal.fire('Hoy es tu dia de suerte! Usa el codigo OFF20');
         }else{
             Swal.fire('Quizá en la proxima oportunidad');
         }
@@ -318,21 +205,13 @@ Swal.fire({
 })
 }
 
-/*alert('Hoy estamos sorteando un 20% de descuento sobre el valor total de tu cotización! Si sale el número 5 ganas el descuento!');
 
-function sorteo () {
-    let sorteo1a10 = Math.ceil(Math.random () * 10);
-    alert (sorteo1a10);
 
-    if (sorteo1a10 == 5) {
-        alert('Hoy es tu dia de suerte! Usa el codigo OFF5');
 
-    }else{
-        alert('Quizá en la proxima oportunidad');
-    };
-}
 
-sorteo(); */
+
+
+
 
 
 //fetch para mostrar fotos de gatos
