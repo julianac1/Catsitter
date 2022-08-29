@@ -26,10 +26,10 @@ formulario.addEventListener('submit',enviarFormulario);
 const numeroNoches = (event) => {
     event.preventDefault();
     console.log(event.target.inputNoches3.value);
-    let total = sumanoches(event.target.inputNoches3.value);
+    let totalNoche = sumanoches(event.target.inputNoches3.value);
     totalNoches.innerHTML = `
     <div>
-        <h4> El total por las noches es: ${total}  </h4>
+        <h4> El total por las noches es: U$${totalNoche}  </h4>
     </div>`
 };
 
@@ -38,31 +38,31 @@ function sumanoches (noches) {
     switch (noches) {
         case '1':
             console.log('Total U$10');
-            return 'Total U$10';
+            return 10;
 
             case '2':
             console.log('Total U$20');
-            return 'Total U$20';
+            return 20;
 
             case '3':
             console.log('Total U$30');
-            return 'Total U$30';
+            return 30;
 
             case '4':
             console.log('Total U$40');
-            return 'Total U$40';
+            return 40;
 
             case '5':
             console.log('Total U$50');
-            return 'Total U$50';
+            return 50;
 
             case '6':
             console.log('Total U$60');
-            return 'Total U$60';
+            return 60;
 
             case '7':
             console.log('Total U$70');
-            return 'Total U$70';
+            return 70;
     
         default:
             alert ('Número de noches (máximo 7 noches):');
@@ -83,7 +83,7 @@ const numeroGatos = (event) => {
     let totalgatos = sumagatos (event.target.inputGatos3.value);
     totalGatos.innerHTML = `
     <div>
-        <h4> El total por la cantidad de gatos es: ${totalgatos} </h4>
+        <h4> El total por la cantidad de gatos es: U$${totalgatos} </h4>
     </div>`
 };
 
@@ -93,19 +93,19 @@ function sumagatos (gatos) {
     switch (gatos) {
         case '1':
             console.log('Total U$10');
-            return 'Total U$10';
+            return 10;
 
             case '2':
             console.log('Total U$20');
-            return 'Total U$20';
+            return 20;
 
             case '3':
             console.log('Total U$30');
-            return 'Total U$30';
+            return 30;
 
             case '4':
             console.log('Total U$40');
-            return 'Total U$40';
+            return 40;
 
             
         default:
@@ -124,16 +124,16 @@ formulario.addEventListener('submit', numeroGatos);
 //Precio total a pagar = innerHTML
 
 function sumatotal (valor1, valor2) {
-    let suma = parseInt(total) + parseInt(totalgatos);
+    let suma = parseInt(valor1) + parseInt(valor2);
     return suma;
 };
 
 const valorFinal = (event) => {
     event.preventDefault();
-    let totalFinal = sumatotal();
+    let totalFinal = sumatotal(totalNoche, totalGatos);
     valorFinal.innerHTML = `
     <div>
-        <h4> El total es: ${totalFinal} </h4>
+        <h4> El total a pagar es: ${totalFinal} </h4>
     </div>`
 };
 
