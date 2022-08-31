@@ -51,33 +51,22 @@ const cotizacion = (event) => {
 
     //Aplicar 20% de descuento sobre el total al usar el codigo OFF20
     console.log(event.target.inputDescuento3.value);
-    function calculasDescuento () {
-    if (event.target.inputDescuento3.value === "OFF20") {
-        function aplicarDescuento () {
-        totalFinal * 0.20;
-        return valorFinal.innerHTML = `
-        <div>
-        <h4> El valor total a pagar con descuento es: U$${totalFinal} </h4>
-        </div>`;
-        };
+    calcularDescuento (event.target.inputDescuento3.value);
     
-    };
-};
+    
 };
 
-/*function calculasDescuento () {
+function calcularDescuento () {
     if (event.target.inputDescuento3.value === "OFF20") {
-        function aplicarDescuento (valor1,valor2 ) {
-        totalFinal * 0.20;
+        let totalconDescuento = (totalNoche + totalgatos) * 0.20;
         return valorFinal.innerHTML = `
         <div>
-        <h4> El valor total a pagar con descuento es: U$${totalFinal} </h4>
+        <h4> El valor total a pagar con descuento es: U$${totalconDescuento} </h4>
         </div>`;
-        };
-    
     };
+    
 };
-*/
+
 
 
 
