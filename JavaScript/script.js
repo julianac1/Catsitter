@@ -21,17 +21,67 @@ formulario.addEventListener('submit',enviarFormulario);
 
 
 
-//Precio noches = innerHTML
+//Cotizacion de noches, gatos y valor total em innerHTML
 
-const numeroNoches = (event) => {
+const cotizacion = (event) => {
+
+    //cotizacion noches
     event.preventDefault();
     console.log(event.target.inputNoches3.value);
     let totalNoche = sumanoches(event.target.inputNoches3.value);
     totalNoches.innerHTML = `
     <div>
         <h4> El total por las noches es: U$${totalNoche}  </h4>
+    </div>`;
+
+    //cotizacion cantidad gatos
+    console.log(event.target.inputGatos3.value);
+    let totalgatos = sumagatos (event.target.inputGatos3.value);
+    totalGatos.innerHTML = `
+    <div>
+        <h4> El total por la cantidad de gatos es: U$${totalgatos} </h4>
     </div>`
+
+    //cotizacion final = noches + gatos
+    let totalFinal = totalNoche + totalgatos;
+    valorFinal.innerHTML = `
+    <div>
+        <h4> El valor total a pagar es :U$${totalFinal} </h4>
+    </div>`;
+
+    //Aplicar 20% de descuento sobre el total al usar el codigo OFF20
+    console.log(event.target.inputDescuento3.value);
+    function calculasDescuento () {
+    if (event.target.inputDescuento3.value === "OFF20") {
+        function aplicarDescuento () {
+        totalFinal * 0.20;
+        return valorFinal.innerHTML = `
+        <div>
+        <h4> El valor total a pagar con descuento es: U$${totalFinal} </h4>
+        </div>`;
+        };
+    
+    };
 };
+};
+
+/*function calculasDescuento () {
+    if (event.target.inputDescuento3.value === "OFF20") {
+        function aplicarDescuento (valor1,valor2 ) {
+        totalFinal * 0.20;
+        return valorFinal.innerHTML = `
+        <div>
+        <h4> El valor total a pagar con descuento es: U$${totalFinal} </h4>
+        </div>`;
+        };
+    
+    };
+};
+*/
+
+
+
+
 
 function sumanoches (noches) {
 
@@ -71,21 +121,6 @@ function sumanoches (noches) {
     
 };
 
-formulario.addEventListener('submit', numeroNoches);
-
-
-
-//Precio gatos = innerHTML
-
-const numeroGatos = (event) => {
-    event.preventDefault();
-    console.log(event.target.inputGatos3.value);
-    let totalgatos = sumagatos (event.target.inputGatos3.value);
-    totalGatos.innerHTML = `
-    <div>
-        <h4> El total por la cantidad de gatos es: U$${totalgatos} </h4>
-    </div>`
-};
 
 
 function sumagatos (gatos) {
@@ -115,30 +150,50 @@ function sumagatos (gatos) {
 
 };
 
-formulario.addEventListener('submit', numeroGatos);
 
+formulario.addEventListener('submit', cotizacion);
 
+//Precio gatos = innerHTML V1
 
-
-
-//Precio total a pagar = innerHTML
-
-function sumatotal (valor1, valor2) {
-    let suma = parseInt(valor1) + parseInt(valor2);
-    return suma;
-};
-
-const valorFinal = (event) => {
+/*const numeroGatos = (event) => {
     event.preventDefault();
-    let totalFinal = sumatotal(totalNoche, totalGatos);
-    valorFinal.innerHTML = `
+    console.log(event.target.inputGatos3.value);
+    let totalgatos = sumagatos (event.target.inputGatos3.value);
+    totalGatos.innerHTML = `
     <div>
-        <h4> El total a pagar es: ${totalFinal} </h4>
+        <h4> El total por la cantidad de gatos es: U$${totalgatos} </h4>
     </div>`
 };
+*/
 
-formulario.addEventListener('submit', valorFinal);
 
+
+
+
+//SweetAlert: metodo random para sortear un descuento de 20% sobre el valor total
+
+window.onload = ()=>{ 
+
+    Swal.fire({
+        icon: 'warning',
+        title: 'Sorteo!',
+        text: 'Hoy estamos sorteando un 20% de descuento sobre el valor total de tu cotización! Si sale el número 5 ganas el descuento! Quieres intentar la suerte?',
+        showConfirmButton: true,
+        confirmButtonText: 'Sí, quiero',
+        showCancelButton: true,
+        cancelButtonText: 'No, no quiero',
+        
+    }).then((result)=>{
+        if (result.isConfirmed) {
+            let sorteo1a10 = Math.ceil(Math.random () * 10);
+            if (sorteo1a10 == 5) {
+                Swal.fire('Hoy es tu dia de suerte! Usa el codigo OFF20');
+            }else{
+                Swal.fire('Quizá en la proxima oportunidad');
+            }
+        }
+    })
+    }
 
 
 
@@ -180,30 +235,7 @@ formulario.addEventListener('submit', guardarDatos);
 
 
 
-//SweetAlert: metodo random para sortear un descuento de 20% sobre el valor total
 
-window.onload = ()=>{ 
-
-Swal.fire({
-    icon: 'warning',
-    title: 'Sorteo!',
-    text: 'Hoy estamos sorteando un 20% de descuento sobre el valor total de tu cotización! Si sale el número 5 ganas el descuento! Quieres intentar la suerte?',
-    showConfirmButton: true,
-    confirmButtonText: 'Sí, quiero',
-    showCancelButton: true,
-    cancelButtonText: 'No, no quiero',
-    
-}).then((result)=>{
-    if (result.isConfirmed) {
-        let sorteo1a10 = Math.ceil(Math.random () * 10);
-        if (sorteo1a10 == 5) {
-            Swal.fire('Hoy es tu dia de suerte! Usa el codigo OFF20');
-        }else{
-            Swal.fire('Quizá en la proxima oportunidad');
-        }
-    }
-})
-}
 
 
 
