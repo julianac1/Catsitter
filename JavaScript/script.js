@@ -51,17 +51,18 @@ const cotizacion = (event) => {
 
     //Aplicar 20% de descuento sobre el total al usar el codigo OFF20
     console.log(event.target.inputDescuento3.value);
-    calcularDescuento (event.target.inputDescuento3.value);
-    
-    
+    calcularDescuento (event.target.inputDescuento3.value, totalFinal);
+
+
 };
 
-function calcularDescuento () {
-    if (event.target.inputDescuento3.value === "OFF20") {
-        let totalconDescuento = (totalNoche + totalgatos) * 0.20;
+function calcularDescuento (descuento, total) {
+    if (descuento === "OFF20") {
+        let totalconDescuento = total * 0.80;
         return valorFinal.innerHTML = `
         <div>
-        <h4> El valor total a pagar con descuento es: U$${totalconDescuento} </h4>
+        <h5> <del>El valor total a pagar es: U$${total}</del> </h5>
+        <h4> El valor total a pagar con el 20% de descuento es: U$${totalconDescuento} </h4>
         </div>`;
     };
     
@@ -142,8 +143,9 @@ function sumagatos (gatos) {
 
 formulario.addEventListener('submit', cotizacion);
 
-//Precio gatos = innerHTML V1
 
+
+//Precio gatos = innerHTML V1
 /*const numeroGatos = (event) => {
     event.preventDefault();
     console.log(event.target.inputGatos3.value);
@@ -191,11 +193,10 @@ window.onload = ()=>{
 
 //Armazenar el nombre y email del usuario
 
-
 function guardarDatos (nombre, email) {
 
-    let nombreUsuario = document.getElementById ('nombre').value;
-    let emailUsuario = document.getElementById ('email').value;
+    let nombreUsuario = document.getElementById ('inputNombre3').value;
+    let emailUsuario = document.getElementById ('inputEmail3').value;
 
  //función para guardar nombre y email al apretar botón calcular
 
@@ -235,18 +236,6 @@ formulario.addEventListener('submit', guardarDatos);
 
 
 
-//fetch para mostrar fotos de gatos
-
-function cargar() {
-    fetch('https://api.thecatapi.com/v1/images/search')
-         .then(response => response.json())
-         .then(json => {
-             console.log(json);
-             json.forEach(element => {
-                 document.getElementById("imagen").src = element.url;
-             });
-});
-}
 
 
 
@@ -259,40 +248,5 @@ function cargar() {
 
 
 
-//Bootstrap cards con fotos y comentarios de clientes - secion clientes.html
-
-let cards = [{
-    image: 'https://estaticos.muyinteresante.es/media/cache/1000x_thumb/uploads/images/gallery/59c4f5655bafe82c692a7052/gato-caja_0.jpg',
-    title: 'Alba y Astra',
-    descripcion: 'Por definir',
-},
-{
-    image: 'https://estaticos.muyinteresante.es/media/cache/1000x_thumb/uploads/images/gallery/59c4f5655bafe82c692a7052/gato-frotandose-piernas.jpg',
-    title: 'Emily',
-    descripcion: 'Por definir',
-},
-{
-    image: 'https://estaticos.muyinteresante.es/media/cache/1000x_thumb/uploads/images/gallery/59c4f5655bafe82c692a7052/gato-persa-bandeja.jpg',
-    title: 'Milagros',
-    descripcion: 'Por definir',
-},
-{
-    image: 'https://estaticos.muyinteresante.es/media/cache/1000x_thumb/uploads/images/gallery/59c4f5655bafe82c692a7052/gato-amasando.jpg',
-    title: 'Flamy',
-    descripcion: 'Por definir',
-},
-];
-
-for (let i = 0; i < cards.length; i++){
-    clientes.innerHTML += `
-    <div class="card" style="width: 18rem;">
-    <img src="${cards[i].image}" class="card-img-top" alt="Astra y Alba">
-    <div class="card-body">
-    <h5 class="card-title">${cards[i].title}</h5>
-    <p class="card-text">${cards[i].descripcion}</p>
-    </div>
-    </div>
-    `
-}
 
 
